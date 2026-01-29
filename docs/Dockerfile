@@ -16,7 +16,7 @@ COPY . /app
 RUN bundle exec jekyll build
 
 # Copy static docs to alpine-based nginx container.
-FROM nginx:stable-alpine
+FROM nginx:1.29.4-alpine3.23
 
 # Copy nginx configuration
 COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
